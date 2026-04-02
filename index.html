@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajan | Holographic HUD Portfolio</title>
+
+    <!-- Google Fonts: Orbitron for HUD styling, Exo for data & body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HUD Layering: Grid, Space depth, and CSS Particles -->
+    <div class="hud-background">
+        <div class="hud-grid"></div>
+        <div class="particles">
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+            <div class="particle p3"></div>
+            <div class="particle p4"></div>
+            <div class="particle p5"></div>
+            <div class="particle p6"></div>
+        </div>
+    </div>
+
+    <!-- HUD Overlay Scanline Effect -->
+    <div class="scanline"></div>
+
+    <!-- Futuristic Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="bracket">[</span> RN <span class="bracket">]</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">SYS.HOME</a></li>
+                <li><a href="#about" class="nav-item">SYS.IDENTITY</a></li>
+                <li><a href="#skills" class="nav-item">SYS.SPECS</a></li>
+                <li><a href="#projects" class="nav-item">SYS.ARCHIVE</a></li>
+                <li><a href="#contact" class="nav-item">SYS.COMMS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section (Impact Area) -->
+        <section id="home" class="hero fade-in-section">
+            <!-- Pulsing depth layer behind content -->
+            <div class="hero-bg-glow"></div>
+
+            <div class="hero-content">
+                <!-- HUD Cyber Corners -->
+                <div class="hud-reticle top-left"></div>
+                <div class="hud-reticle top-right"></div>
+                <div class="hud-reticle bottom-left"></div>
+                <div class="hud-reticle bottom-right"></div>
+
+                <div class="system-status flicker">SYS :: ONLINE</div>
+                <h1 class="glow-title">RAJAN</h1>
+                <p class="tagline">Creative Video Editor & Web Designer</p>
+                <div class="btn-container">
+                    <a href="#projects" class="cyber-btn"><span class="btn-text">INITIALIZE PROTOCOL</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2 class="section-title">SUBJECT DATA<span class="flicker">_</span></h2>
+            <div class="container">
+                <div class="hud-glass-card about-card">
+                    <div class="profile-container">
+                        <!-- Holographic concentric rings -->
+                        <div class="holo-ring ring-1"></div>
+                        <div class="holo-ring ring-2"></div>
+                        <!-- Advanced HUD Holographic Frame Wrapper -->
+                        <div class="profile-frame">
+                            <div class="frame-scanline"></div>
+                            <!-- Updated image tag with direct path and fallback to ensure it always looks amazing -->
+                            <img src="Rajan.jpg"
+                                onerror="this.src='https://images.unsplash.com/photo-1544256718-3baf237f39d0?w=500&q=80'"
+                                alt="Subject Profile" class="profile-img">
+                            <div class="frame-corners"></div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <div class="data-line">> ACCESSING BIO DATA...</div>
+                        <p>Subject is a highly trained digital architect specializing in bridging aesthetics with
+                            advanced systemic function. Armed with expertise in cinematic video editing and
+                            high-fidelity web interfaces, the subject forges immersive visual experiences. Core
+                            objective: Push creative boundaries and construct the interfaces of tomorrow.</p>
+                        <div class="data-block">
+                            <span>STATUS: ACTIVE</span>
+                            <span>CLASS: CREATIVE</span>
+                            <span>RES: 4K HIGH DEF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2 class="section-title">CORE SPECS<span class="flicker">_</span></h2>
+            <div class="container">
+                <div class="skills-grid">
+
+                    <div class="hud-skill-card">
+                        <div class="skill-circle">
+                            <div class="circle-progress"></div>
+                            <div class="skill-icon">🎬</div>
+                        </div>
+                        <h3>VIDEO EDITING</h3>
+                        <div class="skill-level">LVL : ADVANCED</div>
+                    </div>
+
+                    <div class="hud-skill-card">
+                        <div class="skill-circle">
+                            <div class="circle-progress"></div>
+                            <div class="skill-icon">💻</div>
+                        </div>
+                        <h3>HTML / CSS</h3>
+                        <div class="skill-level">LVL : EXPERT</div>
+                    </div>
+
+                    <div class="hud-skill-card">
+                        <div class="skill-circle">
+                            <div class="circle-progress"></div>
+                            <div class="skill-icon">🎨</div>
+                        </div>
+                        <h3>UI/UX DESIGN</h3>
+                        <div class="skill-level">LVL : ADVANCED</div>
+                    </div>
+
+                    <div class="hud-skill-card">
+                        <div class="skill-circle">
+                            <div class="circle-progress"></div>
+                            <div class="skill-icon">🎞️</div>
+                        </div>
+                        <h3>DAVINCI RESOLVE</h3>
+                        <div class="skill-level">LVL : MASTER</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (HUD 3D Cards) -->
+        <section id="projects" class="projects">
+            <h2 class="section-title">SECURE ARCHIVES<span class="flicker">_</span></h2>
+            <div class="container">
+                <div class="projects-grid">
+
+                    <div class="hud-project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80"
+                                    alt="Cyber Interface Prototype">
+                                <div class="project-overlay">
+                                    <div class="overlay-data">FILE 01 // HUD</div>
+                                    <h3>CYBER INTERFACE</h3>
+                                    <p>Holographic design prototype.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hud-project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80"
+                                    alt="Motion Graphics Protocol">
+                                <div class="project-overlay">
+                                    <div class="overlay-data">FILE 02 // MOTION</div>
+                                    <h3>NEO PROTOCOL</h3>
+                                    <p>Abstract 3D motion graphics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hud-project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80"
+                                    alt="Tech Edit Archive">
+                                <div class="project-overlay">
+                                    <div class="overlay-data">FILE 03 // VIDEO</div>
+                                    <h3>SYSTEM OVERRIDE</h3>
+                                    <p>Fast-paced tech promotional edit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 class="section-title">ESTABLISH COMMS<span class="flicker">_</span></h2>
+            <div class="container">
+                <div class="hud-glass-card contact-card">
+                    <!-- HUD Reticles -->
+                    <div class="hud-reticle top-left"></div>
+                    <div class="hud-reticle top-right"></div>
+                    <div class="hud-reticle bottom-left"></div>
+                    <div class="hud-reticle bottom-right"></div>
+
+                    <form class="hud-form"
+                        onsubmit="event.preventDefault(); alert('Packet transmitted securely over encrypted channel.');">
+                        <div class="input-container">
+                            <label>TARGET // NAME</label>
+                            <input type="text" id="name" required placeholder="Enter Designation">
+                            <div class="focus-border"></div>
+                        </div>
+                        <div class="input-container">
+                            <label>NODE // EMAIL</label>
+                            <input type="email" id="email" required placeholder="Enter Signal Frequency">
+                            <div class="focus-border"></div>
+                        </div>
+                        <div class="input-container">
+                            <label>PAYLOAD // MESSAGE</label>
+                            <textarea id="message" rows="4" required placeholder="Enter Encrypted Data..."></textarea>
+                            <div class="focus-border"></div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="cyber-btn type-submit"><span class="btn-text">TRANSMIT DATA</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- UI Footer -->
+    <footer class="hud-footer">
+        <div class="footer-content">
+            <div class="socials">
+                <div class="social-icon" aria-label="GitHub">GH</div>
+                <div class="social-icon" aria-label="LinkedIn">IN</div>
+                <div class="social-icon" aria-label="Twitter">TW</div>
+            </div>
+            <p>UPLINK ESTABLISHED. &copy; 2026 RAJAN HUD V1.0</p>
+        </div>
+    </footer>
+</body>
+
+</html>
