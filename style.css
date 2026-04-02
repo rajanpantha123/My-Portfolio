@@ -380,6 +380,11 @@ section { padding: 9rem 0; min-height: 100vh; display: flex; flex-direction: col
 
 .about-text p { font-size: 1.2rem; color: var(--text-data); margin-bottom: 2.5rem; line-height: 1.8; }
 
+.bio-list { margin-bottom: 2.5rem; list-style-type: none; padding-left: 1.5rem; border-left: 2px solid var(--neon-cyan-dim); }
+.bio-list li { font-size: 1.1rem; color: var(--text-data); margin-bottom: 0.8rem; position: relative; }
+.bio-list li::before { content: '>'; position: absolute; left: -1.5rem; color: var(--neon-magenta); font-family: var(--font-orbitron); }
+.highlight { color: var(--neon-cyan-bright); font-weight: 500; }
+
 .data-block {
     display: flex; gap: 2rem; font-size: 0.85rem; color: var(--neon-cyan-dim); letter-spacing: 2px;
 }
