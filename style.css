@@ -32,6 +32,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
@@ -40,6 +42,8 @@ body {
     font-family: var(--font-exo);
     line-height: 1.6;
     overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
 }
 
 ul {
@@ -58,7 +62,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: -10;
 }
@@ -171,7 +175,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15));
     background-size: 100% 4px;
@@ -1156,6 +1160,25 @@ section {
 }
 
 /* ==========================================================================
+   Hamburger Menu (Desktop Hidden)
+   ========================================================================== */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it stays above the overlay menu */
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--neon-cyan-bright);
+    box-shadow: 0 0 5px var(--neon-cyan-bright);
+}
+
+/* ==========================================================================
    Responsive Refinements for Mobile Terminals
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -1185,26 +1208,98 @@ section {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    section {
+        padding: 6rem 0;
+        min-height: auto;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        letter-spacing: 6px;
+        margin-bottom: 2.5rem;
+    }
+
+    .hud-glass-card {
+        padding: 2.5rem 1.5rem;
+    }
+
     .navbar {
-        flex-direction: column;
-        gap: 1.5rem;
         padding: 1.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        flex-direction: column;
+        background: rgba(2, 6, 17, 0.95);
+        backdrop-filter: blur(25px);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: transform 0.4s ease-in-out;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
+        padding-top: 8rem; /* Space for the header */
+        z-index: 1000;
+        gap: 3rem;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    /* Hamburger animation to 'X' */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-item {
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+    }
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        padding: 2.5rem 1.5rem;
     }
 
     .glow-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         letter-spacing: 6px;
+        margin-bottom: 0.5rem;
     }
 
     .tagline {
-        font-size: 1rem;
+        font-size: 0.9rem;
         letter-spacing: 4px;
+        margin-bottom: 2rem;
+    }
+
+    .cyber-btn {
+        padding: 1rem 1.5rem;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
     }
 
     .hud-reticle {
@@ -1216,44 +1311,54 @@ section {
         padding: 2.5rem 1.5rem;
     }
 
-    .projects-grid {
-        perspective: 800px;
+    .hud-form {
+        gap: 1.5rem;
+    }
+
+    .projects-grid, .skills-grid {
+        grid-template-columns: 1fr;
         gap: 2.5rem;
     }
 
-    .profile-container {
-        width: 300px;
-        height: 300px;
+    .projects-grid {
+        perspective: 800px;
     }
 
-    .profile-img {
+    .profile-container {
+        width: 100%;
+        max-width: 260px;
+        height: 260px;
+        margin: 0 auto;
+    }
+
+    .profile-frame {
         width: 200px;
         height: 200px;
     }
 
     .holo-ring.ring-1 {
-        width: 260px;
-        height: 260px;
+        width: 240px;
+        height: 240px;
     }
 
     .holo-ring.ring-2 {
-        width: 290px;
-        height: 290px;
+        width: 270px;
+        height: 270px;
     }
 
     /* Prevent mobile horizontal overflow from scatter animations */
-    .hud-skill-card:hover .scatter-wrapper.pos-1 { transform: translate(-60px, -60px) scale(0.85); }
-    .hud-skill-card:hover .scatter-wrapper.pos-2 { transform: translate(60px, -60px) scale(0.85); }
-    .hud-skill-card:hover .scatter-wrapper.pos-top { transform: translate(0, -80px) scale(0.85); }
+    .hud-skill-card:hover .scatter-wrapper.pos-1 { transform: translate(-50px, -50px) scale(0.85); }
+    .hud-skill-card:hover .scatter-wrapper.pos-2 { transform: translate(50px, -50px) scale(0.85); }
+    .hud-skill-card:hover .scatter-wrapper.pos-top { transform: translate(0, -70px) scale(0.85); }
     
     .scatter-icon { 
-        width: 40px; 
-        height: 40px; 
+        width: 35px; 
+        height: 35px; 
     }
 
     /* Pull in the decorative nodes as well */
-    .hud-skill-card:hover .scatter-node.n-1 { transform: translate(-60px, 30px) scale(0.8) rotate(45deg); }
-    .hud-skill-card:hover .scatter-node.n-2 { transform: translate(60px, 20px) scale(0.8) rotate(20deg); }
-    .hud-skill-card:hover .scatter-node.n-3 { transform: translate(50px, -40px) scale(0.6) rotate(70deg); }
-    .hud-skill-card:hover .scatter-node.n-4 { transform: translate(-50px, -40px) scale(0.6) rotate(-15deg); }
+    .hud-skill-card:hover .scatter-node.n-1 { transform: translate(-40px, 30px) scale(0.8) rotate(45deg); }
+    .hud-skill-card:hover .scatter-node.n-2 { transform: translate(40px, 20px) scale(0.8) rotate(20deg); }
+    .hud-skill-card:hover .scatter-node.n-3 { transform: translate(30px, -30px) scale(0.6) rotate(70deg); }
+    .hud-skill-card:hover .scatter-node.n-4 { transform: translate(-30px, -30px) scale(0.6) rotate(-15deg); }
 }

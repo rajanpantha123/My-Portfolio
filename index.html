@@ -48,6 +48,11 @@
                 <li><a href="#contact" class="nav-item">SYS.COMMS</a></li>
             </ul>
         </nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
 
     <main>
@@ -338,6 +343,21 @@
             <p>UPLINK ESTABLISHED. &copy; 2026 RAJAN HUD V1.0</p>
         </div>
     </footer>
+    <!-- Hamburger Menu Script -->
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-item").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+        }));
+    </script>
 </body>
 
 </html>
