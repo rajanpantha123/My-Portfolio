@@ -22,7 +22,7 @@ const projects = [
     description: 'Professional promotional graphic for NIT Legend highlighting a comprehensive Graphic Design training course.',
     category: 'photo',
     year: '2024',
-    thumbnail: '/projects/media_1787138979816.jpg',
+    thumbnail: './projects/media_1787138979816.jpg',
     tags: ['Commercial Art', 'Graphic Design'],
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     description: 'Cultural festival creative celebrating the National Paddy Day (Dahi Chiura Khane Din) for NIT Legend.',
     category: 'photo',
     year: '2024',
-    thumbnail: '/projects/media_1787138979513.jpg',
+    thumbnail: './projects/media_1787138979513.jpg',
     tags: ['Social Media', 'Graphic Design'],
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     description: 'Patriotic design created for Republic Day (Ganatantra Diwas), showcasing national pride.',
     category: 'photo',
     year: '2024',
-    thumbnail: '/projects/media_1787138979546.jpg',
+    thumbnail: './projects/media_1787138979546.jpg',
     tags: ['Event Creative', 'Graphic Design'],
   },
   {
@@ -49,7 +49,7 @@ const projects = [
     description: 'Vibrant New Year promotional banner featuring iconic Nepali landmarks and a special enrollment offer.',
     category: 'photo',
     year: '2024',
-    thumbnail: '/projects/media_1787138979749.jpg',
+    thumbnail: './projects/media_1787138979749.jpg',
     tags: ['Promotional', 'Graphic Design'],
   },
   {
@@ -58,7 +58,7 @@ const projects = [
     description: 'Traditional artistic greeting for the Nag Panchami festival featuring cultural elements.',
     category: 'photo',
     year: '2024',
-    thumbnail: '/projects/media_1787138979843.jpg',
+    thumbnail: './projects/media_1787138979843.jpg',
     tags: ['Social Media', 'Graphic Design'],
   },
 
@@ -71,7 +71,8 @@ const projects = [
     description: 'Cinematic video edit featuring dynamic cuts, motion graphics, and color grading celebrating the SEE batch.',
     category: 'video',
     year: '2024',
-    videoSrc: '/projects/SEE.mp4',
+    thumbnail: './projects/see-thumb.jpg',
+    videoSrc: './projects/SEE.mp4',
     tags: ['Video Editing', 'Cinematic'],
   },
   {
@@ -80,7 +81,8 @@ const projects = [
     description: 'Dynamic visual showreel presenting creative design projects, interface builds, and video editing workflows.',
     category: 'video',
     year: '2025',
-    videoSrc: '/projects/portfolio-vid.mov',
+    thumbnail: './projects/portfolio-thumb.jpg',
+    videoSrc: './projects/portfolio-vid.mp4',
     tags: ['Motion Graphics', 'Showreel'],
   },
 

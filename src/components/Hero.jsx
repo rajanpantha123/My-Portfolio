@@ -11,7 +11,7 @@ function HeroPortrait() {
   return (
     <div className="w-full h-full relative group">
       <img
-        src="/Rajan.jpg"
+        src="./Rajan.jpg"
         alt="Rajan Pantha"
         className="w-full h-full object-cover object-[center_20%] rounded-2xl transition-transform duration-600 group-hover:scale-105"
       />

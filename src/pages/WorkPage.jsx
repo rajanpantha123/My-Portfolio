@@ -112,11 +112,12 @@ function VideoCard({ project, onOpenVideo }) {
         {project.videoSrc ? (
           <video
             ref={videoRef}
-            src={`${project.videoSrc}#t=0.1`}
+            src={project.videoSrc}
+            poster={project.thumbnail}
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             className="w-full h-full object-cover"
           />
         ) : null}
@@ -456,9 +457,11 @@ export default function WorkPage() {
               <div className="relative aspect-video bg-black flex items-center justify-center">
                 <video
                   src={activeVideoModal.videoSrc}
+                  poster={activeVideoModal.thumbnail}
                   controls
                   autoPlay
                   playsInline
+                  preload="auto"
                   className="w-full h-full object-contain"
                 />
               </div>

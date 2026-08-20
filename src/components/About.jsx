@@ -29,7 +29,7 @@ export default function About() {
                 Replace the src with your actual portrait image path.
               */}
               <img
-                src="/Rajan.jpg"
+                src="./Rajan.jpg"
                 alt="Rajan Pantha"
                 className="w-full h-full object-cover object-[center_20%] transition-transform duration-600 group-hover:scale-105"
               />

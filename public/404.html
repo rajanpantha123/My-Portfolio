@@ -4,16 +4,13 @@
     <meta charset="utf-8">
     <title>Rajan Pantha — Portfolio</title>
     <script type="text/javascript">
-      // SPA redirect for GitHub Pages (https://github.com/rafgraph/spa-github-pages)
-      var pathSegmentsToKeep = 0;
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      // Clean redirect for direct path access to HashRouter format
+      var path = window.location.pathname;
+      var clean = path.replace(/^\/My-Portfolio\/?/, '').replace(/^\//, '');
+      var isSubdir = path.indexOf('/My-Portfolio') === 0;
+      var rootPath = isSubdir ? '/My-Portfolio/' : '/';
+      var target = window.location.origin + rootPath + (clean ? '#/' + clean : '') + window.location.search;
+      window.location.replace(target);
     </script>
   </head>
   <body>
