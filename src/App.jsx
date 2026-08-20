@@ -1,23 +1,15 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import CustomCursor from './components/CustomCursor';
 import BackgroundTexture from './components/BackgroundTexture';
 import HomePage from './pages/HomePage';
 import WorkPage from './pages/WorkPage';
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   ROOT APP — with react-router
-
-   Routes:
-     /      → HomePage  (Hero, About, Skills, Projects preview, Contact)
-     /work  → WorkPage  (full filterable project grid)
-
-   (c) ACCENT COLOR: Change the --accent-* CSS vars in
-   index.css to adjust the signature glow color.
-   Currently set to hot orange #FF5C1A.
+   ROOT APP — with HashRouter for GitHub Pages
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="bg-bg-base text-text-secondary min-h-screen relative">
         <BackgroundTexture />
         <CustomCursor />
@@ -26,6 +18,6 @@ export default function App() {
           <Route path="/work" element={<WorkPage />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
