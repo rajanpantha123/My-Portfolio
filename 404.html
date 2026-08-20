@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rajan Pantha — Portfolio</title>
+    <script type="text/javascript">
+      // Clean redirect for direct path access to HashRouter format
+      var path = window.location.pathname;
+      var clean = path.replace(/^\/My-Portfolio\/?/, '').replace(/^\//, '');
+      var isSubdir = path.indexOf('/My-Portfolio') === 0;
+      var rootPath = isSubdir ? '/My-Portfolio/' : '/';
+      var target = window.location.origin + rootPath + (clean ? '#/' + clean : '') + window.location.search;
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
